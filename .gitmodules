@@ -4,3 +4,6 @@
 [submodule "git"]
 	path = git
 	url = git://github.com/opscode-cookbooks/git.git
+[submodule "sqlite"]
+	path = sqlite
+	url = git://github.com/opscode-cookbooks/sqlite.git
