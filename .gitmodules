@@ -7,3 +7,6 @@
 [submodule "sqlite"]
 	path = sqlite
 	url = git://github.com/opscode-cookbooks/sqlite.git
+[submodule "heroku-toolbelt"]
+	path = heroku-toolbelt
+	url = git://github.com/rchampourlier/chef-heroku-toolbelt.git
