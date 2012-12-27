@@ -1,8 +1,8 @@
-data_directory = '/var/lib/postgresql/9.0/main'		# use data in another directory, change requires restart
-hba_file = '/etc/postgresql/9.0/main/pg_hba.conf'	# host-based authentication file, change requires restart
-ident_file = '/etc/postgresql/9.0/main/pg_ident.conf'	# ident configuration file, change requires restart
+data_directory = '/var/lib/postgresql/<%= @node[:postgresql][:version] %>/main'		# use data in another directory, change requires restart
+hba_file = '/etc/postgresql/<%= @node[:postgresql][:version] %>/main/pg_hba.conf'	# host-based authentication file, change requires restart
+ident_file = '/etc/postgresql/<%= @node[:postgresql][:version] %>/main/pg_ident.conf'	# ident configuration file, change requires restart
 
-external_pid_file = '/var/run/postgresql/9.0-main.pid'		# write an extra PID file, change requires restart
+external_pid_file = '/var/run/postgresql/<%= @node[:postgresql][:version] %>-main.pid'		# write an extra PID file, change requires restart
 
 listen_addresses = '<%= node[:postgresql][:listen_addresses]%>' # defaults to 'localhost', '*' = all, (change requires restart)
 port = 5433				# (change requires restart)
