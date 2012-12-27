@@ -57,10 +57,10 @@ if node[:postgresql][:role] == "slave"
     owner "postgres"
     group "postgres"
     mode 0644
-    
-    # disabled to prevent accidental restarts in production    
-    # notifies :restart, resources(:service => "postgresql")
-  end  
+
+    # disabled to prevent accidental restarts in production
+    notifies :restart, resources(:service => "postgresql")
+  end
 else
   file "#{node[:postgresql][:data_dir]}/main/recovery.conf" do
     action :delete
