@@ -1,3 +1,6 @@
 [submodule "mongodb"]
 	path = mongodb
 	url = git://github.com/edelight/chef-mongodb.git
+[submodule "git"]
+	path = git
+	url = git://github.com/opscode-cookbooks/git.git
